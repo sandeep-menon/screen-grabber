@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen Grabber - Preview</title>
+    <link rel="stylesheet" href="preview.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/library/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/library/fontawesome/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">Preview</a>
+      <div class="right">
+        <button class="btn btn-outline-secondary" id="exportPDF">
+          Export as PDF
+        </button>
+        <button class="btn btn-outline-secondary" id="exportHTML">
+          Export as HTML
+        </button>
+      </div>
+    </nav>
+    <div class="container">
+      <div id="previewPlaceholder"></div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-backdrop="static"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Comment</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <textarea
+                class="form-control"
+                id="message-text"
+                autofocus
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Discard
+            </button>
+            <button type="button" class="btn btn-success">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.$ = window.jQuery = require("jquery");
+    </script>
+    <script src="./assets/library/bootstrap/js/bootstrap.min.js"></script>
+    <script src="previewrenderer.js"></script>
+  </body>
+</html>

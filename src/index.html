@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Screen Grabber</title>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/icons/site.webmanifest" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/library/bootstrap/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/library/fontawesome/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="appBanner" class="app-banner">
+      <div>Screen Grabber</div>
+      <div id="appHintText" class="app-hint-text"></div>
+    </div>
+    <div class="app-button-row">
+      <span class="app-button">
+        <button id="appBtnStart" type="button" class="btn btn-outline-primary">
+          <i class="fas fa-video"></i>&nbsp;Start Capture
+        </button>
+      </span>
+      <span class="app-button">
+        <button
+          id="appBtnStop"
+          type="button"
+          class="btn btn-outline-danger"
+          disabled
+        >
+          <i class="fas fa-video-slash"></i>&nbsp;Stop Capture
+        </button>
+      </span>
+      <span class="app-button">
+        <button id="appBtnClose" type="button" class="btn btn-outline-danger">
+          Close
+        </button>
+      </span>
+      <span class="app-button">
+        <button id="howToBtn" type="button" class="btn btn-outline-info">
+          <i class="fas fa-question-circle"></i>
+        </button>
+      </span>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>

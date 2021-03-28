@@ -1,0 +1,80 @@
+{
+  "name": "screen-grabber",
+  "productName": "Screen Grabber",
+  "version": "2.1.3",
+  "description": "Easy to use application to string together bunch of screenshots and export them in a single HTML file or PDF document to share between teams.",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "electronmon ./src/index.js",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\"",
+    "build-installer": "electron-builder"
+  },
+  "build": {
+    "appId": "screen-grabber",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "src/assets/icons/favicon.ico"
+    },
+    "nsis": {
+      "installerIcon": "src/assets/icons/favicon.ico",
+      "uninstallerIcon": "src/assets/icons/favicon.ico",
+      "uninstallDisplayName": "Screen Grabber",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "keywords": [],
+  "author": {
+    "name": "Sandeep Menon",
+    "email": "thesandeepmenon@gmail.com"
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "screen_grab"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "electronmon": "^1.1.1",
+    "fontconfig": "^0.1.0",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.52",
+    "@electron-forge/maker-deb": "^6.0.0-beta.52",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.52",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.52",
+    "@electron-forge/maker-zip": "^6.0.0-beta.52",
+    "electron": "9.0.5"
+  }
+}

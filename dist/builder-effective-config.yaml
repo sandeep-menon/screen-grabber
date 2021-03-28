@@ -1,0 +1,16 @@
+directories:
+  output: dist
+  buildResources: build
+appId: screen-grabber
+win:
+  target:
+    - nsis
+  icon: src/assets/icons/favicon.ico
+nsis:
+  installerIcon: src/assets/icons/favicon.ico
+  uninstallerIcon: src/assets/icons/favicon.ico
+  uninstallDisplayName: Screen Grabber
+  license: license.txt
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+electronVersion: 9.0.5
